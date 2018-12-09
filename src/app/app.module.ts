@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TableFilmComponent } from './table-film/table-film.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -47,6 +48,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
+import { FooterComponent } from './footer/footer.component';
 const appRoutes: Routes = [
   { path: 'table', component: TableFilmComponent },
   { path: '',
@@ -60,8 +62,10 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     TableFilmComponent,
+    FooterComponent,
   ],
   imports: [
+    AngularFontAwesomeModule,
     RouterModule.forRoot(
       appRoutes,
     ),

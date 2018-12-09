@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Film } from '../class/film';
 @Injectable()
 export class TableFilmService {
     constructor(private http: HttpClient) { }
