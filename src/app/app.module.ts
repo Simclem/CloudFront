@@ -49,8 +49,11 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { AddFilmComponent } from './add-film/add-film.component';
 const appRoutes: Routes = [
   { path: 'table', component: TableFilmComponent },
+  { path: 'addFilm', component: AddFilmComponent },
   { path: '',
     redirectTo: '/',
     pathMatch: 'full'
@@ -63,6 +66,8 @@ const appRoutes: Routes = [
     AppComponent,
     TableFilmComponent,
     FooterComponent,
+    HeaderComponent,
+    AddFilmComponent,
   ],
   imports: [
     AngularFontAwesomeModule,
