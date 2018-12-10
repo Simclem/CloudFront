@@ -1,7 +1,7 @@
 <div class="mat-app-background basic-container">
 
   <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="tableFilm" ngif="tableFilm[0]!==undefined">
+    <table mat-table [dataSource]="dataSource" ngif="tableFilm[0]!==undefined">
 
       <!-- Position Column -->
       <ng-container matColumnDef="id">

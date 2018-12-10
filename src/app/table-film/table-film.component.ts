@@ -16,12 +16,11 @@ export class TableFilmComponent implements OnInit {
   backEndLocation: string;
   tableFilm: Film[];
   displayedColumns: string[] = ['id', 'name', 'description', 'mark'];
-  dataSource = new MatTableDataSource<Film>(this.tableFilm);
+  dataSource: MatTableDataSource<Film>;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
     this.initConfig();
-    this.dataSource.paginator = this.paginator;
 
   }
 
@@ -34,7 +33,8 @@ export class TableFilmComponent implements OnInit {
   initTableFilm(): void {
     this.service.getData(this.backEndLocation + '/movie').subscribe((data: any) => {
       this.tableFilm = data['list'];
-
+      this.dataSource = new MatTableDataSource<Film>(this.tableFilm);
+      this.dataSource.paginator = this.paginator;
     });
   }
 

@@ -4,8 +4,9 @@ footer{
     position: fixed;
     left: 0;
     bottom: 0;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     width: 100%;
     overflow: hidden;
 }
+    
