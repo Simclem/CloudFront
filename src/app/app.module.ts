@@ -52,10 +52,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { AddFilmComponent } from './add-film/add-film.component';
 const appRoutes: Routes = [
-  { path: 'table', component: TableFilmComponent },
-  { path: 'addFilm', component: AddFilmComponent },
+  { path: '', component: TableFilmComponent },
   { path: '',
-    redirectTo: '/table',
+    redirectTo: '',
     pathMatch: 'full'
   },
 ];

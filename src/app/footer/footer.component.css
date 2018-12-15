@@ -9,4 +9,10 @@ footer{
     width: 100%;
     overflow: hidden;
 }
+
+.buttonContainer{
+    position: absolute;
+    right: 10px;
+    background-color: #fafafa
+}
     
