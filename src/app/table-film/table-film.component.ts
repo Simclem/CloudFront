@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { TableFilmService } from './table-film.service';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatPaginator, MatTableDataSource, MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Film } from '../class/film';
+import { AddFilmComponent } from '../add-film/add-film.component';
 
 @Component({
   selector: 'app-table-film',
@@ -11,7 +12,7 @@ import { Film } from '../class/film';
 })
 export class TableFilmComponent implements OnInit {
 
-  constructor(private service: TableFilmService) { }
+  constructor(private service: TableFilmService, public dialog: MatDialog) { }
 
   backEndLocation: string;
   tableFilm: Film[];
@@ -35,6 +36,18 @@ export class TableFilmComponent implements OnInit {
       this.tableFilm = data['list'];
       this.dataSource = new MatTableDataSource<Film>(this.tableFilm);
       this.dataSource.paginator = this.paginator;
+    });
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(AddFilmComponent, {
+      width: '250px',
+      // data: {name: this.name, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
     });
   }
 

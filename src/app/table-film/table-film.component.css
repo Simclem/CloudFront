@@ -1,4 +1,9 @@
 table {
     width: 100%;
   }
-  
+.buttonContainer{
+  position: absolute;
+  right: 10px;
+    
+}
+    
