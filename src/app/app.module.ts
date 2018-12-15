@@ -55,7 +55,7 @@ const appRoutes: Routes = [
   { path: 'table', component: TableFilmComponent },
   { path: 'addFilm', component: AddFilmComponent },
   { path: '',
-    redirectTo: '/',
+    redirectTo: '/table',
     pathMatch: 'full'
   },
 ];
