@@ -1,24 +1,25 @@
 <form class="example-form">
   <mat-form-field >
-    <input matInput placeholder="Film name" >
+    <input matInput placeholder="Film name" [(ngModel)]="name" name="name">
   </mat-form-field>
   <br />
   <mat-form-field >
-    <input matInput placeholder="Description" >
+    <input matInput placeholder="Description"  [(ngModel)]="description" name="description">
   </mat-form-field>
   <br />
   <mat-form-field >
-    <input matInput placeholder="Mark" type="number" min="1" max="5" >
+    <input matInput placeholder="Mark" type="number" min="1" max="5"  [(ngModel)]="mark" name="mark">
   </mat-form-field>
   <br />
   <mat-form-field >
-    <input matInput placeholder="Year" type="number" min="1901" max="2022" >
+    <input matInput placeholder="Year" type="number" min="1901" max="2022"  [(ngModel)]="year" name="year">
   </mat-form-field>
   <br />
   <mat-form-field >
-    <input matInput placeholder="Comment" >
+    <input matInput placeholder="Comment" [(ngModel)]="comment" name="comment">
   </mat-form-field>
   <br />
-  <button mat-button color="primary" (click)="openDialog()">Add Film</button>
-
 </form>
+<div class="buttonContainer">
+  <button mat-button color="primary" (click)="sendData()">Send</button>
+</div>

@@ -7,6 +7,8 @@ import { TableFilmComponent } from './table-film/table-film.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { FormsModule } from '@angular/forms';
+
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -73,6 +75,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
     ),
+    FormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,

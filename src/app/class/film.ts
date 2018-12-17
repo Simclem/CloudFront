@@ -2,7 +2,7 @@ export interface Film {
     id: number;
     name: string;
     description: string;
-    mark: string;
+    mark: number;
     year: number;
     comment: string;
 }
