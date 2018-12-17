@@ -9,7 +9,9 @@ export class AddFilmComponent  {
 
   constructor(
     public dialogRef: MatDialogRef<AddFilmComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: AddFilmComponent) {}
+    @Inject(MAT_DIALOG_DATA) public data: AddFilmComponent) {
+      console.log('test');
+    }
 
   onNoClick(): void {
     this.dialogRef.close();

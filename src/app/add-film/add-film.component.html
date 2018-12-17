@@ -1,3 +1,24 @@
-<p>
-  add-film works!
-</p>
+<form class="example-form">
+  <mat-form-field >
+    <input matInput placeholder="Film name" >
+  </mat-form-field>
+  <br />
+  <mat-form-field >
+    <input matInput placeholder="Description" >
+  </mat-form-field>
+  <br />
+  <mat-form-field >
+    <input matInput placeholder="Mark" type="number" min="1" max="5" >
+  </mat-form-field>
+  <br />
+  <mat-form-field >
+    <input matInput placeholder="Year" type="number" min="1901" max="2022" >
+  </mat-form-field>
+  <br />
+  <mat-form-field >
+    <input matInput placeholder="Comment" >
+  </mat-form-field>
+  <br />
+  <button mat-button color="primary" (click)="openDialog()">Add Film</button>
+
+</form>
