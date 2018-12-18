@@ -162,10 +162,12 @@ const appRoutes: Routes = [
     MatTooltipModule,
     MatTreeModule,
     ScrollingModule,
-    AddFilmComponent
+    AddFilmComponent,
+    DisplayFilmComponent
   ],
   entryComponents: [
-    AddFilmComponent
+    AddFilmComponent,
+    DisplayFilmComponent
   ],
 
   providers: [],

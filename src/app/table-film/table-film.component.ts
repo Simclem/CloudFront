@@ -3,6 +3,7 @@ import { TableFilmService } from './table-film.service';
 import { MatPaginator, MatTableDataSource, MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Film } from '../class/film';
 import { AddFilmComponent } from '../add-film/add-film.component';
+import { DisplayFilmComponent } from '../display-film/display-film.component';
 
 @Component({
   selector: 'app-table-film',
@@ -44,7 +45,7 @@ export class TableFilmComponent implements OnInit {
   }
 
   openFilm(): void {
-    const dialogRef = this.dialog.open(AddFilmComponent, {});
+    const dialogRef = this.dialog.open(DisplayFilmComponent, {});
   }
 
 
