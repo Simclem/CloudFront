@@ -12,4 +12,7 @@ export class TableFilmService {
     getConfig() {
         return this.http.get(this.configUrl);
     }
+    getFilmById(id: number, configUrl: string): any {
+        return this.http.get(configUrl + 'id=' + id);
+    }
 }
