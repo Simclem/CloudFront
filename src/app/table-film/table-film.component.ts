@@ -44,8 +44,12 @@ export class TableFilmComponent implements OnInit {
     const dialogRef = this.dialog.open(AddFilmComponent, {});
   }
 
-  openFilm(): void {
-    const dialogRef = this.dialog.open(DisplayFilmComponent, {});
+  openFilm(id: number): void {
+    console.log(id);
+
+    const dialogRef = this.dialog.open(DisplayFilmComponent, {
+      data: {idFilm: id}
+    });
   }
 
 
