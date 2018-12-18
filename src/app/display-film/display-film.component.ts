@@ -29,14 +29,13 @@ export class DisplayFilmComponent implements OnInit {
     this.service.getConfig().subscribe((data: any) => {
       this.backEndLocation = data['calledURL'];
       console.log(this.backEndLocation + '/movie?');
-      this.service.getFilmById(this.idFilm , this.backEndLocation + '/movie?').subscribe((data: any) => {
-        this.idFilm = data.id;
-        this.name = data.name;
-        this.description = data.description;
-        this.mark = data.mark;
-        this.year = data.year;
-        this.comment = data.comment;
-        console.log(data);
+      this.service.getFilmById(this.idFilm , this.backEndLocation + '/movie?').subscribe((film: any) => {
+        this.idFilm = film.id;
+        this.name = film.name;
+        this.description = film.description;
+        this.mark = film.mark;
+        this.year = film.year;
+        this.comment = film.comment;
       });
     });
   }
