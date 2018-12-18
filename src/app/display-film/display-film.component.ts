@@ -8,11 +8,15 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 export class DisplayFilmComponent implements OnInit {
 
   idFilm: number;
-
+  name: string;
+  description: string;
+  mark: number;
+  year: number;
+  comment: string;
   constructor(public dialogRef: MatDialogRef<DisplayFilmComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
       this.idFilm = data['idFilm'];
-    }
+  }
 
   ngOnInit() {
   }

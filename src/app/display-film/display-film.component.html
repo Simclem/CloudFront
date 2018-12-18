@@ -1,3 +1,24 @@
-<p>
-  display-film works!
-</p>
+<form class="example-form">
+  <mat-form-field >
+    <input matInput placeholder="Film name" disabled [(ngModel)]="name" name="name">
+  </mat-form-field>
+  <br />
+  <mat-form-field >
+    <input matInput placeholder="Description" disabled [(ngModel)]="description" name="description">
+  </mat-form-field>
+  <br />
+  <mat-form-field >
+    <input matInput placeholder="Mark" disabled [(ngModel)]="mark" name="mark">
+  </mat-form-field>
+  <br />
+  <mat-form-field >
+    <input matInput placeholder="Year" disabled [(ngModel)]="year" name="year">
+  </mat-form-field>
+  <br />
+  <mat-form-field >
+    <input matInput placeholder="Comment" disabled [(ngModel)]="comment" name="comment">
+  </mat-form-field>
+  <br />
+</form>
+<div class="buttonContainer">
+</div>
