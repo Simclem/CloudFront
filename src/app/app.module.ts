@@ -53,6 +53,7 @@ import {CdkTreeModule} from '@angular/cdk/tree';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { AddFilmComponent } from './add-film/add-film.component';
+import { DisplayFilmComponent } from './display-film/display-film.component';
 const appRoutes: Routes = [
   { path: '', component: TableFilmComponent },
   { path: '',
@@ -69,6 +70,7 @@ const appRoutes: Routes = [
     FooterComponent,
     HeaderComponent,
     AddFilmComponent,
+    DisplayFilmComponent,
   ],
   imports: [
     AngularFontAwesomeModule,
